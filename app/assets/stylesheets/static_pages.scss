@@ -1,0 +1,78 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*** Navigation bar typography ***/
+
+.home a {
+	font-family: Lucida Grande, Helvetica, Gill Sans, sans-serif; 
+	color: black;
+	text-decoration: none;
+	transition: color 600ms;
+	-webkit-transition: color 600ms;
+	font-size: 1em;
+	padding: 0 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #BFCED3;
+}
+
+.navbar-inverse .navbar-brand a:hover {
+	color: #BFCED3;
+}
+
+.navbar-inverse {
+	background-color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: black;
+	transition: color 600ms;
+	-webkit-transition: color 600ms;
+}
+
+.navbar-inverse {
+	font-family: Lucida Grande, Helvetica, Gill Sans, sans-serif;
+	font-size: 1.5em;
+}
+
+/*** Navigation bar layout ***/
+
+.nav {
+  z-index: 1;
+}
+
+.anchor {
+	padding-top: 70px;
+}
+
+.navbar-inverse {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.navbar-fixed-top {
+	height: 70px;
+	border: none;
+}
+
+/**** Contact page ****/
+
+.contacta {
+	font-family: Lucida Grande, Helvetica, Gill Sans, sans-serif;
+	font-size: 1.5em;
+}
+
+.contactb {
+	font-family: Lucida Grande, Helvetica, Gill Sans, sans-serif;
+}
+
+/*** Footer ***/
+
+.copyright {
+	display: block;
+	text-align: center;
+
+}
+
