@@ -2,7 +2,7 @@
 
 <h1>Listing Photos</h1>
 
-<table>
+<!--table>
   <thead>
     <tr>
       <th>Title</th>
@@ -13,18 +13,33 @@
   </thead>
 
   <tbody>
-    <% @photos.each do |photo| %>
+    <% #@photos.each do |photo| %>
       <tr>
-        <td><%= photo.title %></td>
-        <td><%= photo.description %></td>
-        <td><%= photo.image_url %></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= photo.title %></td>
+        <td><%#= photo.description %></td>
+        <td><%#= photo.image_url %></td>
+        <td><%#= link_to 'Show', photo %></td>
+        <td><%#= link_to 'Edit', edit_photo_path(photo) %></td>
+        <td><%#= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <#% end %>
   </tbody>
-</table>
+</table-->
+
+<div class="container-fluid">
+  <div class="row">
+    <% @photos.each do |photo| %>
+      <div class="col-sm-2 col-md-4">
+        <%= image_tag(photo.image_url, class: "img-responsive") %>
+        <h1><%= photo.title %></h1>
+        <p><%= photo.description %></p>
+        <p><%= link_to 'Show', photo %></p>
+        <p><%= link_to 'Edit', edit_photo_path(photo) %></p>
+        <p><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div><!-- /col -->
+    <% end %>
+  </div>
+</div>
 
 <br>
 
