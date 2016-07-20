@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Photos</h1>
+<h1 class="listingindex">Listing Photos</h1>
 
 <!--table>
   <thead>
@@ -28,19 +28,11 @@
 
 <div class="container-fluid">
   <div class="row">
-    <% @photos.each do |photo| %>
-      <div class="col-sm-2 col-md-4">
-        <%= image_tag(photo.image_url, class: "img-responsive") %>
-        <h1><%= photo.title %></h1>
-        <p><%= photo.description %></p>
-        <p><%= link_to 'Show', photo %></p>
-        <p><%= link_to 'Edit', edit_photo_path(photo) %></p>
-        <p><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      </div><!-- /col -->
-    <% end %>
+    <%= render "photo" %>
   </div>
 </div>
 
 <br>
 
 <%= link_to 'New Photo', new_photo_path %>
+<%#= console %>

@@ -19,7 +19,8 @@
 }
 
 .navbar-inverse .navbar-brand a:hover {
-	color: #BFCED3;
+	/*color: #BFCED3;*/
+	background-color: white;
 }
 
 .navbar-inverse {
@@ -27,7 +28,7 @@
 }
 
 .navbar-inverse .navbar-nav>li>a {
-	color: black;
+	/*color: black;*/
 	transition: color 600ms;
 	-webkit-transition: color 600ms;
 }
@@ -66,6 +67,12 @@
 
 .contactb {
 	font-family: Lucida Grande, Helvetica, Gill Sans, sans-serif;
+}
+
+/**** landing_page ****/
+
+.featured {
+	padding-top: 70px;
 }
 
 /*** Footer ***/
