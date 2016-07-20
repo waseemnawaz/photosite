@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :albums
   resources :photos
   resources :orders, only: [:index, :show, :create, :destroy]
   get 'static_pages/about'
