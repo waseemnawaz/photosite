@@ -2,7 +2,7 @@
 
 <h1>Listing Albums</h1>
 
-<table>
+<!--table>
   <thead>
     <tr>
       <th>Name</th>
@@ -12,18 +12,31 @@
   </thead>
 
   <tbody>
-    <% @albums.each do |album| %>
+    <%# @albums.each do |album| %>
       <tr>
-        <td><%= album.name %></td>
-        <td><%= album.description %></td>
-        <td><%= link_to 'Show', album %></td>
-        <td><%= link_to 'Edit', edit_album_path(album) %></td>
-        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= album.name %></td>
+        <td><%#= album.description %></td>
+        <td><%#= link_to 'Show', album %></td>
+        <td><%#= link_to 'Edit', edit_album_path(album) %></td>
+        <td><%#= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <%# end %>
   </tbody>
-</table>
+</table-->
 
+<div class="container-fluid">
+  <div class="row">
+    <% @albums.each do |album| %>
+      <div class="col-sm-2 col-md-4">
+        <h1><%= album.name %></h1>
+        <p><%= album.description %></p>
+        <p><%= link_to 'Show', album %></p>
+        <p><%= link_to 'Edit', edit_album_path(album) %></p>
+        <p><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div><!-- /col -->
+    <% end %>
+  </div>
+</div>
 <br>
 
 <%= link_to 'New Album', new_album_path %>
