@@ -12,9 +12,11 @@
 
 <p>
   <strong>Image url:</strong>
-  <%= image_tag @photo.avatar %>
+  <%#= image_tag @photo.avatar %>
+  <%= image_tag @photo.avatar, class: "img-responsive showspic" %>
+  <%#= image_tag(photo.image_url, class: "img-responsive") %>
 </p>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>
-<%#= console %>
+<%= console %>

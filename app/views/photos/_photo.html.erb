@@ -1,6 +1,7 @@
 <% @photos.each do |photo| %>
       <div class="col-sm-2 col-md-4">
-        <%= image_tag(photo.image_url, class: "img-responsive") %>
+        <%#= image_tag(photo.image_url, class: "img-responsive") %>
+        <%= image_tag(photo.avatar, class: "img-responsive") %>
         <h1><%= photo.title %></h1>
         <p><%= photo.description %></p>
         <p><%= link_to 'Show', photo %></p>
