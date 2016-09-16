@@ -12,8 +12,9 @@
 
 <p>
   <strong>Image url:</strong>
-  <%= image_tag@photo.image_url %>
+  <%= image_tag @photo.avatar %>
 </p>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>
+<%#= console %>
