@@ -29,9 +29,13 @@
     <% @albums.each do |album| %>
       <div class="col-sm-2 col-md-4">
         <h1><%= album.name %></h1>
+        <% (album.photos).each do |photo| %>
+            <%=photo.inspect %>
+        <% end %>
         <p><%= album.description %></p>
         <p><%= link_to 'Show', album %></p>
         <p><%= link_to 'Edit', edit_album_path(album) %></p>
+        <!--p><%#= link_to 'Upload new photo', new_album_photo_path(@album) %></p-->
         <p><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></p>
       </div><!-- /col -->
     <% end %>

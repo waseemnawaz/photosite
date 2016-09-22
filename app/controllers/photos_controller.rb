@@ -72,3 +72,4 @@ class PhotosController < ApplicationController
       params.require(:photo).permit(:title, :description, :image_url, :avatar, :remove_avatar)
     end
 end
+
