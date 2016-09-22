@@ -34,11 +34,19 @@
                 <li><a href="#abt">SOBRE</a></li>
                 <li><a href="#work2">TRABAJOS</a></li>
                 <li><a href="#kntkto">CONTACTO</a></li>
+                <li>
+                  <% if user_signed_in? %>
+                    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                  <% else %>
+                    <%= link_to('Login', new_user_session_path) %>
+                  <% end %>
+                </li>
               </ul>
             </div><!-- collapse -->
         </div><!-- end container -->
       </nav><!-- end navbar -->
-
+      <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 <%= yield %>
 
 <footer>
